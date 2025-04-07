@@ -1,0 +1,13 @@
+* VERSION v1.0.0
+
+->update() debe ser utilizado en el loop. Es un metodo no bloqueante. Se encarga de checkear la entrada serial que se encuentre vacia.
+En caso de llegar algun mensaje, los procesa segun corresponda. 
+-> El programa tiene la capacidad de recibir y procesar mensajes. De enviar mensajes de texto y de
+chequear el nivel de bateria y señal. 
+-> El nivel de señal se se traduce en indicadores como "Mala", "Regular", etc. El calculo para cada desicion 
+es aproximado, ya que el valor rssi, es logaritmico y no lineal. 
+ 
+
+/*RECORDAR:  Para lograr recibir los mensajes completos se debe expandir el buffer de la
+libreria SoftwareSerial.h. Se debe modificar la variable bufCapacity (linea 401) de 64 a 256.
+*/
